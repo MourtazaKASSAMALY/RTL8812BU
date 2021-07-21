@@ -38,8 +38,12 @@ sudo reboot
 
 If the instruction *sudo modprobe 88x2bu* fails, then disable secure boot before trying again :
 ```bash
-# sudo mokutil --disable-validation (choose length 8-16 password and reboot to change secure boot state and disable it)
+sudo apt-get install mokutil
+mokutil --sb-state
+sudo mokutil --disable-validation
 ```
+
+Choose length 8-16 password and reboot to change secure boot state and disable it: confirm the password and reboot, press any key when you see the blue screen (MOK management). Select *Change Secure Boot state* and enter what is asked about the password you chose and press Enter. Select *Yes* to disable Secure Boot in *shim-signed* and then press Enter key to finish.
 
 For setting monitor mode:
 

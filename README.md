@@ -36,6 +36,11 @@ sudo modprobe 88x2bu
 sudo reboot
 ```
 
+If the instruction *sudo modprobe 88x2bu* fails, then disable secure boot before trying again :
+```bash
+# sudo mokutil --disable-validation (choose length 8-16 password and reboot to change secure boot state and disable it)
+```
+
 For setting monitor mode:
 
 ```bash

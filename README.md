@@ -36,7 +36,7 @@ sudo modprobe 88x2bu
 sudo reboot
 ```
 
-If the instruction *sudo modprobe 88x2bu* fails with *Operation not permitted* then disable secure boot before trying again:
+If the instruction *"sudo modprobe 88x2bu"* fails with *"Operation not permitted"* then disable secure boot before trying again:
 ```bash
 sudo apt-get install mokutil
 mokutil --sb-state

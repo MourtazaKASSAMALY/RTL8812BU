@@ -1,3 +1,5 @@
+Original repository: https://github.com/fastoe/RTL8812BU | README.md updated
+
 # Realtek RTL8812BU Driver for Linux
 
 [![Build Status](https://travis-ci.com/fastoe/RTL8812BU.svg?branch=master)](https://travis-ci.com/fastoe/RTL8812BU)

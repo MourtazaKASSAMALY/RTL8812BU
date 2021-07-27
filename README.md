@@ -21,6 +21,25 @@ Currently tested with Linux kernel 4.12.14/4.15.0/5.3.0 on X86_64 platform **onl
 ### For Raspberry Pi
 * https://github.com/fastoe/RTL8812BU_for_Raspbian
 
+## Set proxy when connected from VPN
+
+```bash
+export http_proxy="http://defra1c-proxy.emea.nsn-net.net:8080"
+export https_proxy="http://defra1c-proxy.emea.nsn-net.net:8080"
+export ftp_proxy="http://defra1c-proxy.emea.nsn-net.net:8080"
+echo "Acquire::http::proxy \"http://defra1c-proxy.emea.nsn-net.net:8080/\";" | sudo tee /etc/apt/apt.conf
+git config --global http.proxy http://defra1c-proxy.emea.nsn-net.net:8080
+```
+
+## Unset proxy if disconnected from VPN
+
+```bash
+export http_proxy=""
+export https_proxy=""
+export ftp_proxy=""
+echo "Acquire::http::proxy \"\";" | sudo tee /etc/apt/apt.conf
+git config --global --unset http.proxy
+```
 
 ### DKMS installation
 
